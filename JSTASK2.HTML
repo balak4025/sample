@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(187, 208, 2); 
+
+    }
+        /* .left {
+            width: 300px;
+            height: 180px;
+            background-color: rgb(227, 145, 58);
+            border: solid;
+            padding: 10%;
+            margin: 30%;
+        
+
+        } */
+        /* .right{
+            width: 100;
+            margin: 20%
+        } */
+        .main1{
+            background-color: rgba(227, 231, 235, 0.886);
+            margin: 40px auto;
+padding: 20px;
+border-radius: 25px;
+box-shadow: 1px 1px 20px black;
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            height: 400px;
+        }
+        input,select{
+            width: 100%;
+            border-radius: 20px;
+        }
+        button{
+          width: 100%;
+            border-radius: 30px;  
+            border-style: dashed;
+        
+        }
+       button:hover {
+  background-color: rgb(255, 0, 0);
+}
+.left{
+    width: 45%;
+}
+.right{
+    width: 40%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="main1">
+    <div class="left">
+        <h1> BUS TICKET BOOKING</h1>
+        <label>Enter Bus Name </label> <input type="text" id="one">
+        <label>Enter Your Age </label> <input type="number" id="two">
+
+
+        <label>Select Bus Route</label> <select id="three">
+            <option value="0">Select Bus Route</option>
+            <option value="Trichy-chennai">Trichy-chennai</option>
+            <option value="Madurai-Theni">Madurai-Theni</option>
+            <option value="PUDHUKOTTAI-TANJORE">PUDHUKOTTAI-TANJORE</option>
+        </select>
+
+
+
+<label>Select Seat Type</label>
+        <select id="four">
+            <option value="500">Select Seat Type</option>
+            <option value="500">Regular</option>
+            <option value="700">Premium</option>
+            <option value="500">VIP</option>
+        </select></br>
+
+
+<label>Select Bus Type </label>
+        <select id="five">
+            <option value="0">Select Bus Type</option>
+            <option value="0">NON-AC</option>
+            <option value="100">AC</option>>
+        </select>
+
+<label> Enter Number of Tickets: </label>
+        <input type id="six"></br>
+        <button onclick="myfun()"> Submit </button>
+    </div>
+    <div class="right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3aVp71Oolr0m-GP45kZ4F9M2htY5gnIXLw&s">
+        <h1>Status</h1>
+        <div id="ticket">
+            <p><u>BOOKING SUMMARY</u></p>
+            <P id="seven">BOOKING THE TICKET PROCESS</P>
+        </div>
+    </div>
+    </div>
+    <script>
+
+        function myfun() {
+            event.preventDefault();
+
+            var a = document.getElementById('one').value
+            var b = document.getElementById('two').value
+            var c = document.getElementById('three').value;
+            var d = parseInt(document.getElementById('four').value);
+            var e = parseInt(document.getElementById('five').value);
+            var f = parseInt(document.getElementById('six').value);
+            var total = (d + e) * f;
+            console.log(total)
+            var p = document.getElementById("seven")
+            p.innerHTML = "BUS NAME : " + a + "<br>" + "BUS ROUTE :" + c + "<br>" + "TOTAL PRICE :  " + total
+
+        }
+    </script>
+
+</body>
+
+</html>
